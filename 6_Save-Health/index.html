@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Татуревич Save Health</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+    </head>
+    <body>
+        <div class="container">
+            <header class="site-header">
+                <h1>Збережи своє здоров'я❗</h1>
+            </header>
+            <div>
+                <p id="fixed-message">❗</p>
+                <div id="fixed-message-container">
+                    <h3>Тест на хронотип:</h3>
+                    <p>Дізнайтесь свій хронотип, щоб гармонійно збалансувати день та бути енергійним!⏰</p>
+                    <div id="buttons">
+                        <button id="btn-close">Не цікаво</button>
+                        <a href="test/index_test.html"><button id="btn-open">Хочу пройти!</button></a>
+                    </div>
+                </div>
+            </div>
+            <section class="Main">
+                <h2>Саме головне</h2>
+                <p class="nutrition">
+                    <span>Правильне харчування:</span>Збалансований раціон –
+                    запорука здоров'я. Вживайте більше овочів, фруктів, злаків і
+                    менше цукру, солі та жирів.
+                </p>
+                <p class="activity">
+                    <span>Фізична активність:</span>Рух – це життя! Оберіть
+                    улюблену активність: ходьбу, біг, йогу чи плавання.
+                </p>
+                <p class="sleep">
+                    <span>Повноціний сон:</span>Якісний відпочинок – запорука
+                    відновлення організму. Намагайтеся спати не менше 7-8 годин
+                    щоночі.
+                </p>
+            </section>
+            <section class="important">
+                <h2>Чому це важливо?</h2>
+                <img
+                    class="person"
+                    src="img/healthy-person.png"
+                    alt="Здорова людина"
+                />
+                <p>
+                    Здоров'я – це основа щасливого та продуктивного життя.Добре
+                    самопочуття дозволяє нам досягати цілей, насолоджуватися
+                    кожним днем і уникати серйозних хвороб. Регулярна турбота
+                    про фізичне та ментальне здоров'я допомагає жити довше та
+                    якісніше..
+                </p>
+            </section>
+
+            <section class="influence">
+                <h2>Вплив здоров'я на життя:</h2>
+                <ul class="influence-list">
+                    <li class="influence-item standart">
+                        <span class="text">Енергія та продуктивність</span> –
+                        краще самопочуття допомагає працювати ефективніше.
+                    </li>
+                    <li class="influence-item standart">
+                        <span class="text">Довголіття</span> – здоровий спосіб
+                        життя зменшує ризик хронічних хвороб.
+                    </li>
+                    <li class="influence-item vip">
+                        <span class="text">Якість життя</span> – активність і
+                        правильне харчування підвищують загальне задоволення
+                        життям.
+                    </li>
+                    <li class="influence-item vip">
+                        <span class="text">Міцна імунна система</span> –
+                        здоровий організм краще бореться з вірусами та
+                        інфекціями.
+                    </li>
+                    <li class="influence-item vip-vip">
+                        <span class="text">Емоційний баланс</span> – фізичне
+                        здоров'я позитивно впливає на психіку та настрій.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Галерея</h2>
+                <section class="gallery">
+                    <img
+                        src="img/left-arrow.png"
+                        alt="left-arrow"
+                        class="arrow-image"
+                        id="btn_left_arrow"
+                    />
+                    <div id="border-img"><img
+                        src="img/pictures-gallery/1.jpg"
+                        alt="images"
+                        class="main-image"
+                        id="doctor-img"
+                    /></div>
+                    <img
+                        src="img/rigth-arrow.png"
+                        alt="right-arrow"
+                        class="arrow-image"
+                        id="btn_right_arrow"
+                    />
+                </section>
+            </section>
+
+            <section>
+                <h2>Калькулятор ІМТ</h2>
+                <h3>Що таке ІМТ?</h3>
+                <p>
+                    <b>Індекс маси тіла (ІМТ)</b> – це показник, який допомагає
+                    оцінити співвідношення вашої ваги до зросту та визначити, чи
+                    знаходиться ваша маса тіла в межах норми.
+                </p>
+                <section class="calculator-section">
+                    <div class="calculator">
+                        <div class="calculatorform">
+                            <form class="calculatorlabel">
+                                <p>Введіть масу тіла:</p>
+                                <input type="number" id="weight" />
+                                <p>кг</p>
+                            </form>
+                            <form class="calculatorlabel">
+                                <p>Введіть зріст:</p>
+                                <input type="number" id="height" />
+                                <p>см</p>
+                            </form>
+                            <button id="btn_calculate">Розрахувати</button>
+                            <p id="incorrect-value"></p>
+                        </div>
+                        <div id="your-imt-label">
+                            <span>Ваш ІМТ:</span>
+                            <p id="your-imt"></p>
+                            <p id="your-imt-result"></p>
+                            <p id="your-imt-wish"></p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section сlass="vitamins">
+                <h2>Вітаміни</h2>
+                <p id="p-vitamis"></p>
+            </section>
+
+            <section сlass="advice">
+                <h2>Порада</h2>
+                <button id="btn_advice">Отримати пораду</button>
+                <p id="p-advice">Тут буде порада</p>
+                <div id="p-medical-img">
+                    <img id="medical-img" src="" alt="" />
+                </div>
+                <footer class="site-footer">
+                    <p id="btn-buy-pills">Купити💊</p>
+                    <p id="count-of-pills">💊💊💊❌❌</p>
+                </footer>
+            </section>
+        </div>
+    </body>
+    <script src="js/script.js"></script>
+</html>

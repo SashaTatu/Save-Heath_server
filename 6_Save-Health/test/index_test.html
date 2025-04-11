@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Тест на хронотип</title>
+    <link rel="stylesheet" href="style_test.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1>Тест на хронотип</h1>
+        </header>
+        <div id="fixed-response-container">
+            <h3 id="fixed-response-h3">Залиште ваш відгук</h3>
+            <p id="fixed-response">Ваш відгук буде надісланий автору сайту</p>
+            <input type="text" id="fixed-response-input" placeholder="Напишіть відгук...">
+            <button id="btn-response" onclick="sendFeedback()">Надіслати</button>
+        </div>
+        <section>
+            <button id="start_btn">Почати тестування!</button>
+            <div class="main">
+                <h2 id="question">1.Коли вам найкраще працюється або вчиться?</h2>
+                <div class="result">
+                    <h3 id="name-result">Ви - тип хронотипу</h3>
+                    <p id="info-result">якась інформація про хронотип</p>
+                </div>
+                <div class="answer">
+                    <div>
+                        <input type="radio" name="answer" id="answer1" class='radio_btn' value="A">
+                        <label for="answer1" class='radio_btn'>Вранці, поки голова свіжа</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="answer" id="answer2" class='radio_btn' value="B">
+                        <label for="answer2" class='radio_btn'>Після обіду, ближче до вечора</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="answer" id="answer3" class='radio_btn' value="C">
+                        <label for="answer3" class='radio_btn'>Увечері або вночі</label>
+                    </div>
+                    <div>
+                        <input  type="radio" name="answer" id="answer4" class='radio_btn' value="D">
+                        <label for="answer4" class='radio_btn'>В будь-який час, якщо добре виспався/лася</label>
+                    </div>
+                    <div class="main_nav">
+                        <button id="continue_btn" onclick="resetSelection()">Продовжити</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="site-footer">
+            <button id="back-to-site_btn" onclick="location.href='../index.html'">Повернутися на головний сайт
+            </button>
+            <button id="redo-test_btn" onclick="location.href='../test/index_test.html'">Пройти тест знову</button>
+        </footer>
+    </div>
+    <script src="script_test.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #72d3ef; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 750px;
+    height: 525px;
+}
+.site-header {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+h1 {
+    width: 360px;
+    font-size: 36px;
+    line-height: 40px;
+}
+
+#fixed-response-container{
+    position: fixed;
+    bottom: 60%;
+    max-width: 260px;
+    right: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+    visibility: visible;
+    transform: translateX(320px);
+    opacity: 1;
+    transition: transform 0.7s ease-in-out, opacity 0.9s ease-in-out;
+}
+
+#fixed-response-h3{
+    text-align: center;
+    margin-top: 0;
+}
+
+#fixed-response{
+    text-align: center;
+    margin-top: 0;
+}
+
+#fixed-response-input{
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#btn-response {
+    width: 100%;
+    background: linear-gradient(90deg, #35b0d2, #4dc3e4);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#btn-response:hover {
+    background: linear-gradient(90deg, #2a8da7, #3aa8c5);
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+}
+
+#start_btn{
+    background: linear-gradient(90deg, #2fbd1c, #19b604);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    width: 400px;
+    height: 60px;
+    position: absolute;
+    bottom: 330px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#start_btn:hover{
+    background: linear-gradient(90deg, #249617, #138d03);
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main{
+    display: none;
+    height: fit-content;
+}
+
+.result{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+}
+
+#name-result{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#info-result{
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    margin: 0px 50px;
+}
+
+.answer{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+h2 {
+    padding: 12px;
+}
+
+.answer label {
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+.answer input {
+    accent-color: #67bed5;
+    margin-right: 10px;
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+}
+
+.answer input:checked + label {
+    color: #67bed5;
+    
+}
+
+.main_nav{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#continue_btn{
+    background: linear-gradient(90deg, #2fbd1c, #19b604);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+    color: #ffffff;
+    font-size: large;
+    cursor: pointer;
+    
+}
+
+#continue_btn:hover{
+    background: linear-gradient(90deg, #249617, #138d03);
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.site-footer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+#back-to-site_btn{
+    background: linear-gradient(90deg, #35b0d2, #4dc3e4);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+    color: #ffffff;
+    font-size: large;
+    cursor: pointer;
+    margin-top: 307px;
+}
+
+#back-to-site_btn:hover{
+    background: linear-gradient(90deg, #2a8da7, #3aa8c5);
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+}
+
+#redo-test_btn{
+    display: none;
+    background: linear-gradient(90deg, #35b0d2, #4dc3e4);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+    color: #ffffff;
+    font-size: large;
+    cursor: pointer;
+}
+
+
+
+#redo-test_btn:hover{
+    background: linear-gradient(90deg, #2a8da7, #3aa8c5);
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
+}

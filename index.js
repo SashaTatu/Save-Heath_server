@@ -43,7 +43,7 @@ app.post('/send-feedback', async (req, res) => {
         const data = await telegramResponse.json();
 
         if (data.ok) {
-            res.json({ status: 'Відгук надіслано!' });
+            res.json();
         } else {
             console.error('Помилка Telegram:', data);
             res.status(500).json({ status: 'Помилка при надсиланні в Telegram' });

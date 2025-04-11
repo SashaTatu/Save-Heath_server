@@ -241,9 +241,16 @@ function sendFeedback() {
         },
         body: JSON.stringify({ message: text })
     })
-    .then(res => res.json())
+    .then(async res => {
+        if (res.status === 204) {
+            return {};
+        }
+        return res.json();
+    })
     .then(data => {
-        alert(data.status);
+        if (data.status) {
+            alert(data.status);
+        }
         document.getElementById("fixed-response-input").value = "";
     })
     .catch(err => {

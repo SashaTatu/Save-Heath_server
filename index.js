@@ -62,7 +62,7 @@ app.post('/send-feedback', feedbackLimiter, async (req, res) => {
   
 
 const PORT = process.env.PORT;
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, '127.0.0.1', () => {
   console.log(`Сервер запущено на порту: ${PORT}`);
   console.log(`Сервер працює на http://localhost:${PORT}`)
 });

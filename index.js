@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const rateLimit = require('express-rate-limit');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
@@ -18,12 +19,15 @@ app.get('/test', (req, res) => {
     res.sendFile(path.join(__dirname, '6_Save-Health', 'test', 'index_test.html'));
   });
 
-
+const feedbackLimiter = rateLimit({
+    windowMs: 1 * 60 * 1000,
+    max: 3, 
+    message: { status: 'Занадто багато запитів. Спробуйте пізніше.' }
+});
 
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const id = process.env.CHAT_ID;
-
-app.post('/send-feedback', async (req, res) => {
+app.post('/send-feedback', feedbackLimiter, async (req, res) => {
     const message = req.body.message;
 
     if (!message) {
@@ -60,4 +64,5 @@ app.post('/send-feedback', async (req, res) => {
 const PORT = process.env.PORT;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Сервер запущено на порту: ${PORT}`);
+  console.log(`Сервер працює на http://localhost:${PORT}`)
 });

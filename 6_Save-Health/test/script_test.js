@@ -213,27 +213,35 @@ function submitTest() {
 }
 
 
+
+
 document.getElementById('btn-response').addEventListener('click', () => {
-    setTimeout(() => {
-        document.getElementById('fixed-response-container').style.transform = 'translateY(-150px)'
-        document.getElementById('fixed-response-h3').innerText = 'Дякуємо за ваш відгук!';
-        document.getElementById('fixed-response').style.display = 'none';
-        document.getElementById('fixed-response-input').style.display = 'none';
-        document.getElementById('btn-response').style.display = 'none';
-    },100)
-    setTimeout(() => {
-        document.getElementById('fixed-response-container').style.opacity = '0';
-    },2000)
+    const text = document.getElementById("fixed-response-input").value;
+
+    if (text.trim() === "") {
+        document.getElementById('fixed-response-input').style.border = '1px solid red';
+        document.getElementById('incorrect-response').style.display = 'block';
+        return;
+    }else {
+        sendFeedback()
+        setTimeout(() => {
+            document.getElementById('fixed-response-container').style.minHeight = '0px'
+            document.getElementById('fixed-response-container').style.transform = 'translateY(-150px)'
+            document.getElementById('fixed-response-h3').innerText = 'Дякуємо за ваш відгук!';
+            document.getElementById('fixed-response').style.display = 'none';
+            document.getElementById('fixed-response-input').style.display = 'none';
+            document.getElementById('incorrect-response').style.display = 'none';
+            document.getElementById('btn-response').style.display = 'none';
+        },100)
+        setTimeout(() => {
+            document.getElementById('fixed-response-container').style.opacity = '0';
+        },2000) 
+    }
+    
 })
 
-
 function sendFeedback() {
-    let text = document.getElementById("fixed-response-input").value;
-    if (text.trim() === "") {
-        alert("Введіть повідомлення!");
-        return;
-    }
-
+    const text = document.getElementById("fixed-response-input").value;
     fetch('/send-feedback', {
         method: 'POST',
         headers: {
